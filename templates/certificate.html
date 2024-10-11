@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certificate of Half Marathon</title>
+    <style>
+      body {
+        font-family: "Times New Roman", Times, serif;
+        background-color: white;
+        margin: 0;
+        padding: 0;
+      }
+
+      .certificate-container {
+        max-width: 1000px;
+        padding: 30px;
+        border: 20px solid #1e73be;
+        background-color: white;
+        margin: 20px auto;
+        box-sizing: border-box;
+      }
+
+      .certificate-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 10px;
+      }
+
+      .certificate-header img {
+        height: 100px;
+      }
+
+      .address-info {
+        font-size: 14px;
+        text-align: right;
+      }
+
+      .contact-info {
+        font-size: 14px;
+        text-align: left;
+      }
+
+      .certificate-title {
+        text-align: center;
+        color: #1e73be;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-top: 30px;
+        font-family: "Georgia", serif;
+      }
+
+      .recipient-name {
+        font-size: 2rem;
+        color: #b08b4f;
+        font-weight: bold;
+        font-family: "Georgia", serif;
+      }
+
+      .certificate-body {
+        text-align: center;
+        font-size: 1.1rem;
+        margin-top: 20px;
+        font-family: "Arial", sans-serif;
+      }
+
+      .certificate-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 40px;
+        text-align: center;
+      }
+
+      .signature,
+      .date-time {
+        margin-top: 40px;
+      }
+
+      .signature span,
+      .date-time span {
+        border-top: 1px solid black;
+        display: block;
+        margin-top: 10px;
+      }
+
+      .cert-seal img {
+        width: 100px;
+        height: auto;
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 768px) {
+        .certificate-header {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        .certificate-footer {
+          flex-direction: column;
+        }
+
+        .certificate-container {
+          padding: 20px;
+        }
+
+        .certificate-header img {
+          margin-top: 20px;
+        }
+
+        .address-info {
+          text-align: right;
+          margin-top: 10px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .certificate-title {
+          font-size: 1.6rem;
+        }
+
+        .recipient-name {
+          font-size: 1.6rem;
+        }
+
+        .certificate-body p {
+          font-size: 1rem;
+        }
+      }
+
+      .certificate_presented {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      .certificate-text {
+        max-width: 600px;
+        margin: auto;
+        line-height: 1.5;
+      }
+
+      .info {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .info div {
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="certificate-container">
+      <!-- Certificate Header -->
+      <div class="certificate-header">
+        <div class="contact-info">
+          <p>Register-Id: <%= registerId %></p>
+          <p>E-Mail: <%= email %></p>
+          <p>Phone No.: +91 <%= phone %></p>
+        </div>
+        <div class="logo">
+          <img
+            src="https://indiadesignsystem.bombaydc.com/assets/india-designs/display/MP-MSME/color.svg"
+            alt="MSME Logo"
+          />
+        </div>
+        <div class="address-info">
+          <p><%= address %></p>
+          <p><%= city %> (<%= zipCode %>)</p>
+          <p><%= state %> (<%= country %>)</p>
+        </div>
+      </div>
+
+      <!-- Certificate Title -->
+      <div class="certificate-title">Certificate of Half Marathon</div>
+
+      <!-- Certificate Body -->
+      <div class="certificate-body">
+        <p class="certificate_presented">This Certificate Presented to</p>
+        <p class="recipient-name"><%= name %></p>
+        <p class="certificate-text">
+          The certificate of achievement is awarded to individuals who have
+          demonstrated outstanding performance in their field. Here’s an example
+          text for a certificate.
+        </p>
+      </div>
+
+      <!-- Certificate Info -->
+      <div class="certificate-body info">
+        <div>Date of Birth: <%= dob %></div>
+        <div>Gender: <%= gender %></div>
+        <div>Blood Group: <%= bloodGroup %></div>
+      </div>
+
+      <!-- Certificate Footer with Seal and Signature -->
+      <div class="certificate-footer">
+        <div class="date-time">
+          <p><%= dateTime %></p>
+          <span>DATE-TIME</span>
+        </div>
+        <div class="cert-seal">
+          <img
+            src="https://d2tl9ctlpnidkn.cloudfront.net/newyorkp/images/contentimages/images/Satisfaction-Guarantee(2).png"
+            alt="Certified Seal"
+          />
+        </div>
+        <div class="signature">
+          <span>SIGNATURE</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
